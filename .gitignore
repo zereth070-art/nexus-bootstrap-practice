@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+
+# Build / compilados
+*.css.map
+scss/*.css.map
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
