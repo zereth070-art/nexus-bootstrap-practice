@@ -6,9 +6,19 @@
   --bs-body-bg: #f5f0fa;
   --bs-body-color: #240046;
   --bs-card-bg: #ffffff;
+  --bs-card-color: #240046;
   --bs-border-color: rgba(36, 0, 70, 0.15);
   --bs-link-color: #5A189A;
   --bs-link-hover-color: #3C096C;
+}
+
+// Bootstrap setea --bs-card-bg directamente en .card, por lo que
+// la herencia no basta: hay que sobrescribir la regla del componente.
+[data-bs-theme="light"] .card {
+  --bs-card-bg: #ffffff;
+  --bs-card-color: #240046;
+  background-color: #ffffff;
+  color: #240046;
 }
 
 body {
