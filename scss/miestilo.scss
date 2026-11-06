@@ -15,26 +15,121 @@
   $headings-font-family: v.$headings-font-family
 );
 
-//Estilos propios post-Bootstrap
-//No toca el botón
+// ==========================================================================
+// 3. Mixins reutilizables
+// ==========================================================================
 
-.btn{
-  font-family: 'Titillium Web', sans-serif;
+// Tarjeta interactiva con elevación al pasar el ratón
+@mixin card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+  }
 }
 
+// Anillo de foco accesible
+@mixin focus-ring($color: v.$primary) {
+  &:focus-visible {
+    outline: 2px solid $color;
+    outline-offset: 2px;
+  }
+}
+
+// ==========================================================================
+// 4. Estilos propios post-Bootstrap
+// ==========================================================================
+
+// Tipografía de botones
+.btn {
+  font-family: 'Titillium Web', sans-serif;
+  @include focus-ring();
+}
+
+// Logo
 .logo-img {
   width: auto;
   transition: filter 0.25s ease, transform 0.25s ease;
-
 }
 
-.logo:hover .logo-img{
+.logo:hover .logo-img {
   filter: brightness(1.12);
   transform: scale(1.02);
 }
 
-// Portadas
-.card-img-top{
+.logo {
+  @include focus-ring();
+}
+
+// Portadas: relación de aspecto fija para evitar saltos de layout
+.card-img-top {
   aspect-ratio: 3 / 4;
   object-fit: cover;
+}
+
+// Tarjetas interactivas
+.card {
+  @include card-hover;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  &-title {
+    color: v.$body-color;
+  }
+
+  &-subtitle {
+    opacity: 0.85;
+  }
+}
+
+// Enlaces de navegación con foco visible
+.nav-link {
+  @include focus-ring();
+  border-radius: 0.375rem;
+}
+
+// Botón principal con micro-animación
+.btn-primary {
+  transition: transform 0.15s ease, filter 0.15s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// ==========================================================================
+// 5. Accesibilidad: respetar preferencias de movimiento reducido
+// ==========================================================================
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// ==========================================================================
+// 6. Skip-link visible al enfocar
+// ==========================================================================
+.visually-hidden-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  background: v.$primary;
+  color: #fff;
+  border-radius: 0.375rem;
 }

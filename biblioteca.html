@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexus — Tu biblioteca de videojuegos">
+    <title>Nexus — Mi biblioteca</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./scss/miestilo.css">
+</head>
+
+<body>
+    <a class="visually-hidden-focusable" href="#contenido">Saltar al contenido</a>
+
+    <header class="border-bottom py-3">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <a href="/" class="logo d-flex align-items-center gap-2 text-decoration-none">
+                <img src="./images/logo-nexus.png" alt="" width="44" height="44" class="logo-img" decoding="async">
+                <span class="h4 mb-0 fw-semibold text-white">Nexus</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/biblioteca" aria-current="page">Biblioteca</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/descubrir">Descubrir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/perfil">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <div class="container py-5">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+                <h1 class="h3 mb-0">Mi biblioteca</h1>
+                <a href="/descubrir" class="btn btn-primary">+ Añadir juego</a>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <article class="card h-100">
+                        <img src="./images/silentHill2Remake.avif" class="card-img-top" width="300" height="400"
+                            alt="Portada de Silent Hill 2" loading="lazy" decoding="async">
+                        <div class="card-body">
+                            <h2 class="card-title h5">Silent Hill 2</h2>
+                            <p class="card-subtitle text-body-secondary mb-2">Terror · Bloober Team · 2024</p>
+                            <p class="card-text small">Completado · Valoración: 9/10</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="/juegos/silent-hill-2" class="btn btn-outline-light btn-sm">Ver ficha</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100">
+                        <img src="./images/darksouls.jpg" class="card-img-top" width="300" height="400"
+                            alt="Portada de Dark Souls" loading="lazy" decoding="async">
+                        <div class="card-body">
+                            <h2 class="card-title h5">Dark Souls</h2>
+                            <p class="card-subtitle text-body-secondary mb-2">Rol de acción · FromSoftware · 2011</p>
+                            <p class="card-text small">Jugando · Valoración: 8/10</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="/juegos/dark-souls" class="btn btn-outline-light btn-sm">Ver ficha</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-top mt-5 py-4">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <p class="mb-0">&copy; 2026 Nexus. Juega, valora, comparte.</p>
+            <nav aria-label="Enlaces del pie">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="/biblioteca">Biblioteca</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/descubrir">Descubrir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/perfil">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

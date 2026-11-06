@@ -11863,6 +11863,10 @@ textarea.form-control-lg {
 .btn {
   font-family: "Titillium Web", sans-serif;
 }
+.btn:focus-visible {
+  outline: 2px solid #7B2CBF;
+  outline-offset: 2px;
+}
 
 .logo-img {
   width: auto;
@@ -11874,7 +11878,72 @@ textarea.form-control-lg {
   transform: scale(1.02);
 }
 
+.logo:focus-visible {
+  outline: 2px solid #7B2CBF;
+  outline-offset: 2px;
+}
+
 .card-img-top {
   aspect-ratio: 3/4;
   object-fit: cover;
+}
+
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover, .card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.card-title {
+  color: #E0AAFF;
+}
+.card-subtitle {
+  opacity: 0.85;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid #7B2CBF;
+  outline-offset: 2px;
+}
+.nav-link {
+  border-radius: 0.375rem;
+}
+
+.btn-primary {
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.visually-hidden-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  background: #7B2CBF;
+  color: #fff;
+  border-radius: 0.375rem;
 }

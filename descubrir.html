@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexus — Descubre nuevos videojuegos">
+    <title>Nexus — Descubrir</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./scss/miestilo.css">
+</head>
+
+<body>
+    <a class="visually-hidden-focusable" href="#contenido">Saltar al contenido</a>
+
+    <header class="border-bottom py-3">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <a href="/" class="logo d-flex align-items-center gap-2 text-decoration-none">
+                <img src="./images/logo-nexus.png" alt="" width="44" height="44" class="logo-img" decoding="async">
+                <span class="h4 mb-0 fw-semibold text-white">Nexus</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/biblioteca">Biblioteca</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/descubrir" aria-current="page">Descubrir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/perfil">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <div class="container py-5">
+            <h1 class="h3 mb-4">Descubrir juegos</h1>
+            <p class="lead mb-4">Explora títulos nuevos y añádelos a tu biblioteca.</p>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <article class="card h-100">
+                        <img src="./images/finalfantasyX.jpg" class="card-img-top" width="300" height="400"
+                            alt="Portada de Final Fantasy X" loading="lazy" decoding="async">
+                        <div class="card-body">
+                            <h2 class="card-title h5">Final Fantasy X</h2>
+                            <p class="card-subtitle text-body-secondary mb-2">JRPG · Squaresoft · 2001</p>
+                            <p class="card-text">Último Final Fantasy desarrollado por Squaresoft antes de su fusión con Enix.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="/juegos/final-fantasy-x" class="btn btn-primary btn-sm">Ver ficha</a>
+                            <button class="btn btn-outline-light btn-sm ms-2">+ Añadir</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100">
+                        <img src="./images/minecraft.png" class="card-img-top" width="300" height="400"
+                            alt="Portada de Minecraft" loading="lazy" decoding="async">
+                        <div class="card-body">
+                            <h2 class="card-title h5">Minecraft</h2>
+                            <p class="card-subtitle text-body-secondary mb-2">Sandbox · Mojang · 2009</p>
+                            <p class="card-text">El gran juego de construcción de los 2010.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="/juegos/minecraft" class="btn btn-primary btn-sm">Ver ficha</a>
+                            <button class="btn btn-outline-light btn-sm ms-2">+ Añadir</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-top mt-5 py-4">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <p class="mb-0">&copy; 2026 Nexus. Juega, valora, comparte.</p>
+            <nav aria-label="Enlaces del pie">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="/biblioteca">Biblioteca</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/descubrir">Descubrir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/perfil">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

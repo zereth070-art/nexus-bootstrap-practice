@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexus — Tu perfil">
+    <title>Nexus — Perfil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./scss/miestilo.css">
+</head>
+
+<body>
+    <a class="visually-hidden-focusable" href="#contenido">Saltar al contenido</a>
+
+    <header class="border-bottom py-3">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <a href="/" class="logo d-flex align-items-center gap-2 text-decoration-none">
+                <img src="./images/logo-nexus.png" alt="" width="44" height="44" class="logo-img" decoding="async">
+                <span class="h4 mb-0 fw-semibold text-white">Nexus</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/biblioteca">Biblioteca</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/descubrir">Descubrir</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/perfil" aria-current="page">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <div class="container py-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-auto">
+                    <img src="./images/logo-nexus.png" alt="Avatar del usuario" width="96" height="96" class="rounded-circle">
+                </div>
+                <div class="col">
+                    <h1 class="h3 mb-1">Tu perfil</h1>
+                    <p class="text-body-secondary mb-0">Jugador desde 2024 · 12 juegos en biblioteca</p>
+                </div>
+            </div>
+
+            <section class="mt-5">
+                <h2 class="h5 mb-3">Estadísticas</h2>
+                <div class="row row-cols-1 row-cols-sm-3 g-3">
+                    <div class="col">
+                        <div class="card text-center p-3">
+                            <div class="h2 mb-0">12</div>
+                            <div class="small text-body-secondary">Juegos</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center p-3">
+                            <div class="h2 mb-0">4</div>
+                            <div class="small text-body-secondary">Completados</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center p-3">
+                            <div class="h2 mb-0">8.4</div>
+                            <div class="small text-body-secondary">Nota media</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="border-top mt-5 py-4">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <p class="mb-0">&copy; 2026 Nexus. Juega, valora, comparte.</p>
+            <nav aria-label="Enlaces del pie">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="/biblioteca">Biblioteca</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/descubrir">Descubrir</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/perfil">Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
