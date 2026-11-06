@@ -11907,7 +11907,7 @@ textarea.form-control-lg {
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
 }
 .game-card {
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 .game-card__title {
   color: var(--bs-body-color);
@@ -11931,6 +11931,12 @@ textarea.form-control-lg {
 .card:hover, .card:focus-within {
   transform: translateY(-4px);
   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+[data-bs-theme=light] .card {
+  border-color: rgba(36, 0, 70, 0.15);
 }
 
 .logo-img {
@@ -11978,6 +11984,7 @@ textarea.form-control-lg {
   --bs-border-color: rgba(36, 0, 70, 0.15);
   --bs-link-color: #5A189A;
   --bs-link-hover-color: #3C096C;
+  --bs-secondary-color: #595959;
 }
 
 [data-bs-theme=light] .card {
@@ -11985,6 +11992,33 @@ textarea.form-control-lg {
   --bs-card-color: #240046;
   background-color: #ffffff;
   color: #240046;
+}
+
+[data-bs-theme=dark] {
+  --bs-body-bg: #10002B;
+  --bs-body-color: #E0AAFF;
+  --bs-card-bg: #240046;
+  --bs-card-color: #E0AAFF;
+  --bs-border-color: rgba(224, 170, 255, 0.15);
+  --bs-link-color: #C77DFF;
+  --bs-link-hover-color: #ffffff;
+  --bs-secondary-color: rgba(224, 170, 255, 0.75);
+}
+
+[data-bs-theme=dark] .card {
+  --bs-card-bg: #240046;
+  --bs-card-color: #E0AAFF;
+  background-color: #240046;
+  color: #E0AAFF;
+}
+
+[data-bs-theme=dark] .btn-outline-secondary {
+  --bs-btn-color: #C77DFF;
+  --bs-btn-border-color: #C77DFF;
+  --bs-btn-hover-color: #10002B;
+  --bs-btn-hover-bg: #C77DFF;
+  --bs-btn-active-color: #10002B;
+  --bs-btn-active-bg: #C77DFF;
 }
 
 body {

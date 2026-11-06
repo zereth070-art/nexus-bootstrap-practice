@@ -2,6 +2,7 @@
 
 // Tematizado claro/oscuro basado en data-bs-theme (Bootstrap 5.3)
 
+// Modo claro
 [data-bs-theme="light"] {
   --bs-body-bg: #f5f0fa;
   --bs-body-color: #240046;
@@ -10,15 +11,43 @@
   --bs-border-color: rgba(36, 0, 70, 0.15);
   --bs-link-color: #5A189A;
   --bs-link-hover-color: #3C096C;
+  --bs-secondary-color: #595959;
 }
 
-// Bootstrap setea --bs-card-bg directamente en .card, por lo que
-// la herencia no basta: hay que sobrescribir la regla del componente.
 [data-bs-theme="light"] .card {
   --bs-card-bg: #ffffff;
   --bs-card-color: #240046;
   background-color: #ffffff;
   color: #240046;
+}
+
+// Modo oscuro (paleta morada de marca)
+[data-bs-theme="dark"] {
+  --bs-body-bg: #10002B;
+  --bs-body-color: #E0AAFF;
+  --bs-card-bg: #240046;
+  --bs-card-color: #E0AAFF;
+  --bs-border-color: rgba(224, 170, 255, 0.15);
+  --bs-link-color: #C77DFF;
+  --bs-link-hover-color: #ffffff;
+  --bs-secondary-color: rgba(224, 170, 255, 0.75);
+}
+
+[data-bs-theme="dark"] .card {
+  --bs-card-bg: #240046;
+  --bs-card-color: #E0AAFF;
+  background-color: #240046;
+  color: #E0AAFF;
+}
+
+// Botón outline-secondary visible en modo oscuro
+[data-bs-theme="dark"] .btn-outline-secondary {
+  --bs-btn-color: #C77DFF;
+  --bs-btn-border-color: #C77DFF;
+  --bs-btn-hover-color: #10002B;
+  --bs-btn-hover-bg: #C77DFF;
+  --bs-btn-active-color: #10002B;
+  --bs-btn-active-bg: #C77DFF;
 }
 
 body {

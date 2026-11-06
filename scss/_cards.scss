@@ -4,7 +4,7 @@
 
 .game-card {
   @include m.card-hover;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 
   &__title {
     color: var(--bs-body-color);
@@ -28,4 +28,9 @@
 
 .card {
   @include m.card-hover;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  [data-bs-theme="light"] & {
+    border-color: rgba(36, 0, 70, 0.15);
+  }
 }
