@@ -1,6 +1,4 @@
-// Nexus - interactividad básica
-
-// 1. Cambio de tema claro/oscuro (persiste en localStorage)
+// 1. Cambio de tema claro/oscuro 
 (function initTheme() {
     const root = document.documentElement;
     const saved = localStorage.getItem('nexus-theme');
