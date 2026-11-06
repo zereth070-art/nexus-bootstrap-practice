@@ -1,0 +1,27 @@
+@use "mixins" as m;
+
+// Estilos de botones personalizados (BEM: btn--*)
+
+.btn {
+  font-family: 'Titillium Web', sans-serif;
+  @include m.focus-ring();
+}
+
+.btn-primary {
+  @include m.button-pop;
+}
+
+.btn-outline-light {
+  @include m.button-pop;
+}
+
+// Variante BEM propia para acciones secundarias
+.btn--ghost {
+  background: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}

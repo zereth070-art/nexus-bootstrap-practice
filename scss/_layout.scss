@@ -1,0 +1,37 @@
+@use "mixins" as m;
+
+// Layout: header, footer, skip-link
+
+.logo-img {
+  width: auto;
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.logo:hover .logo-img {
+  filter: brightness(1.12);
+  transform: scale(1.02);
+}
+
+.logo {
+  @include m.focus-ring();
+}
+
+.nav-link {
+  @include m.focus-ring();
+  border-radius: 0.375rem;
+}
+
+// Skip-link visible al enfocar
+.visually-hidden-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.5rem 1rem !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  background: #7B2CBF;
+  color: #fff;
+  border-radius: 0.375rem;
+}

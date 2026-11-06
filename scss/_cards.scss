@@ -1,0 +1,31 @@
+@use "mixins" as m;
+
+// Tarjetas de juego (BEM: game-card)
+
+.game-card {
+  @include m.card-hover;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  &__title {
+    color: var(--bs-body-color);
+  }
+
+  &__meta {
+    opacity: 0.85;
+  }
+
+  &__cover {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+}
+
+// Portadas genéricas
+.card-img-top {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.card {
+  @include m.card-hover;
+}

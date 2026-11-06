@@ -1,0 +1,20 @@
+@use "mixins" as m;
+
+// Tematizado claro/oscuro basado en data-bs-theme (Bootstrap 5.3)
+
+[data-bs-theme="light"] {
+  --bs-body-bg: #f5f0fa;
+  --bs-body-color: #240046;
+  --bs-card-bg: #ffffff;
+  --bs-border-color: rgba(36, 0, 70, 0.15);
+  --bs-link-color: #5A189A;
+  --bs-link-hover-color: #3C096C;
+}
+
+body {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.theme-toggle {
+  @include m.focus-ring();
+}

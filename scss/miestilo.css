@@ -11868,6 +11868,71 @@ textarea.form-control-lg {
   outline-offset: 2px;
 }
 
+.btn-primary {
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline-light {
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.btn-outline-light:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+.btn-outline-light:active {
+  transform: translateY(0);
+}
+
+.btn--ghost {
+  background: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+}
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.game-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.game-card:hover, .game-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+.game-card {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.game-card__title {
+  color: var(--bs-body-color);
+}
+.game-card__meta {
+  opacity: 0.85;
+}
+.game-card__cover {
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.card-img-top {
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover, .card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
+}
+
 .logo-img {
   width: auto;
   transition: filter 0.25s ease, transform 0.25s ease;
@@ -11883,28 +11948,6 @@ textarea.form-control-lg {
   outline-offset: 2px;
 }
 
-.card-img-top {
-  aspect-ratio: 3/4;
-  object-fit: cover;
-}
-
-.card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-.card:hover, .card:focus-within {
-  transform: translateY(-4px);
-  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.35);
-}
-.card {
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-.card-title {
-  color: #E0AAFF;
-}
-.card-subtitle {
-  opacity: 0.85;
-}
-
 .nav-link:focus-visible {
   outline: 2px solid #7B2CBF;
   outline-offset: 2px;
@@ -11913,27 +11956,6 @@ textarea.form-control-lg {
   border-radius: 0.375rem;
 }
 
-.btn-primary {
-  transition: transform 0.15s ease, filter 0.15s ease;
-}
-.btn-primary:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.1);
-}
-.btn-primary:active {
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 .visually-hidden-focusable:focus {
   position: static !important;
   width: auto !important;
@@ -11946,4 +11968,33 @@ textarea.form-control-lg {
   background: #7B2CBF;
   color: #fff;
   border-radius: 0.375rem;
+}
+
+[data-bs-theme=light] {
+  --bs-body-bg: #f5f0fa;
+  --bs-body-color: #240046;
+  --bs-card-bg: #ffffff;
+  --bs-border-color: rgba(36, 0, 70, 0.15);
+  --bs-link-color: #5A189A;
+  --bs-link-hover-color: #3C096C;
+}
+
+body {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid #7B2CBF;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
