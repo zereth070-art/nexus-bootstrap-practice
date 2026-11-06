@@ -10,11 +10,16 @@
 
     const btn = document.getElementById('theme-toggle');
     if (btn) {
+        const apply = (t) => {
+            btn.textContent = t === 'dark' ? '🌙' : '☀️';
+            btn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
+        };
+        apply(theme);
         btn.addEventListener('click', () => {
             const next = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
             root.setAttribute('data-bs-theme', next);
             localStorage.setItem('nexus-theme', next);
-            btn.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
+            apply(next);
         });
     }
 })();

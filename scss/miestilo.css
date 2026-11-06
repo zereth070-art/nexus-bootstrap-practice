@@ -11913,7 +11913,7 @@ textarea.form-control-lg {
   color: var(--bs-body-color);
 }
 .game-card__meta {
-  opacity: 0.85;
+  color: var(--bs-secondary-color);
 }
 .game-card__cover {
   aspect-ratio: 3/4;
